@@ -2,6 +2,21 @@
 
 All notable changes to MQTNL will be documented in this file.
 
+## [0.69.0] - 2025-08-20
+
+### BREAKING CHANGES
+- **🚨 Flag Number Compatibility Fix**: Updated packet flags to match NOS Ficus Elastica
+  - `FLAG_PING_REQUEST`: 2 → 1 (NOS Compatible)
+  - `FLAG_PING_REPLY`: 3 → 2 (NOS Compatible)  
+  - `FLAG_BROADCAST_PING`: 4 → 3 (NOS Compatible)
+  - `FLAG_BROADCAST_REPLY`: 5 → 4 (NOS Compatible)
+  - **Migration**: Update any hardcoded flag numbers in your code to use constants
+  - **Cross-compatibility**: Now fully compatible with NOS ecosystem
+
+### Fixed
+- **Packet Flag Compatibility**: Ensures seamless communication with NOS devices
+- **Cross-Platform Compatibility**: MQTNL can now communicate with NOS instances
+
 ## [0.68.0] - 2025-08-20
 
 ### Added
