@@ -2,20 +2,6 @@
 
 > Making MQTT feel like TCP/IP with QoS features and priority queue scheduling
 
-### ### �🔧 Monitoring
-```javascript
-// Get detailed statistics
-const stats = cm.getDetailedStats();
-console.log(stats.activeConnections, stats.avgLatency, stats.connectionHealth);anced Monitoring
-```javascript
-// Get detailed statistics
-const stats = cm.getDetailedStats();
-console.log(stats.activeConnections, stats.avgLatency, stats.connectionHealth);vanced Monitoring
-```javascript
-// Get detailed statistics
-const stats = cm.getDetailedStats();
-console.log(stats.activeConnections, stats.avgLatency, stats.connectionHealth);eduling
-
 [![npm version](https://badge.fury.io/js/mqtnl.svg)](https://www.npmjs.com/package/mqtnl)
 [![Node.js](https://img.shields.io/node/v/mqtnl)](https://nodejs.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
