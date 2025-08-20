@@ -1,6 +1,6 @@
 {
   "name": "mqtnl",
-  "version": "0.68.1",
+  "version": "0.69.0",
   "description": "Socket-style networking over MQTT with QoS features and priority queue scheduling",
   "main": "index.js",
   "keywords": [
