@@ -1,6 +1,6 @@
 {
   "name": "mqtnl",
-  "version": "0.69.1",
+  "version": "0.69.2",
   "description": "Familiar socket API over MQTT with smart packet prioritization and IoT-friendly features",
   "main": "index.js",
   "keywords": [
