@@ -497,4 +497,4 @@ MIT License - see [LICENSE](LICENSE) file for details.
 
 **Built with ❤️ for the IoT and real-time communication community**
 
-*MQTNL v0.68.0 - Socket-Style Networking Over MQTT*
+*MQTNL v0.68.1 - Socket-Style Networking Over MQTT*
