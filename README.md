@@ -1,6 +1,6 @@
 # MQTNL - Socket-Style Networking Over MQTT
 
-> Making MQTT feel like TCP/IP with QoS features and priority queue scheduling
+> Familiar socket API over MQTT with smart packet prioritization
 
 [![npm version](https://badge.fury.io/js/mqtnl.svg)](https://www.npmjs.com/package/mqtnl)
 [![Node.js](https://img.shields.io/node/v/mqtnl)](https://nodejs.org/)
@@ -8,7 +8,7 @@
 
 ## 🔌 What is MQTNL?
 
-MQTNL provides a **familiar socket-like API** over reliable MQTT transport, with useful features like **priority queues**, **rate limiting**, and **adaptive packet sizing**. Think TCP/IP sockets, but over MQTT with better QoS control.
+MQTNL provides a **familiar socket-like API** over reliable MQTT transport, with useful features like **priority queues**, **rate limiting**, and **adaptive packet sizing**. Think TCP/IP sockets, but over MQTT with **additional application-level QoS** for smarter packet prioritization.
 
 ```javascript
 // Familiar socket-like API - but addresses can be ANYTHING!
@@ -77,9 +77,10 @@ cm.connect(() => {
 - **Connection-oriented**: Create sockets on specific ports
 - **Bidirectional**: Send and receive with callbacks
 
-### 🚀 QoS Priority System
+### 🚀 Application-Level QoS Priority
 - **4-level priority**: CRITICAL → HIGH → NORMAL → LOW  
-- **Real priority queue**: High priority packets **never wait**
+- **Smart packet scheduling**: Important packets processed first
+- **Works with MQTT QoS**: Additional layer on top of MQTT's delivery guarantees
 - **Property-based**: Just set `conn.QoSPriority = QoS.CRITICAL`
 
 ### 🧠 Built-in Features
@@ -178,6 +179,8 @@ conn.QoSPriority = QoS.HIGH;      // 1 - Real-time data (sensors, commands)
 conn.QoSPriority = QoS.NORMAL;    // 2 - Regular data (default)
 conn.QoSPriority = QoS.LOW;       // 3 - Bulk data (file transfers)
 ```
+
+**Note**: MQTNL priority works **alongside** MQTT's native QoS (0,1,2). MQTT QoS handles delivery guarantees, while MQTNL priority handles application-level packet scheduling.
 
 ### Enhanced Features
 

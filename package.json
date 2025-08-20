@@ -1,7 +1,7 @@
 {
   "name": "mqtnl",
   "version": "0.69.1",
-  "description": "Socket-style networking over MQTT with QoS features and priority queue scheduling",
+  "description": "Familiar socket API over MQTT with smart packet prioritization and IoT-friendly features",
   "main": "index.js",
   "keywords": [
     "mqtt",
